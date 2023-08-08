@@ -18,7 +18,7 @@ Install the required dependencies using npm install.
 Start the development server using npm start.
 
 # Running Tests
-This project includes a set of tests that can be run using the command line. To run the tests, use the command npm test.
+This project includes a set of tests that can be run using the command line. To run the tests, use the command npm test. 
 
 # Learning Objectives Achieved
 Throughout this project, I have accomplished the following learning objectives:
