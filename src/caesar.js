@@ -1,19 +1,12 @@
-// Please refrain from tampering with the setup code provided here,
-// as the index.html and test files rely on this setup to work properly.
-// Only add code (helper methods, variables, etc.) within the scope
-// of the anonymous function on line 6
-
 const caesarModule = (function () {
-  // you can add any code you want within this function scope
-  
   //create alphabet variable. 2 iterations. positive shift uses first iteration[0-25], negative shift uses second[26-51]
   const alphabet = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
 
-  //input: word being decifered of encrypted
+  //input: word being deciphered of encrypted
   //shift: shift in letters
-  //encode: true means encrypt, false means decifer
+  //encode: true means encrypt, false means decipher
   function caesar(input, shift, encode = true) {
-    //terminate early if shift is invalid
+    //terminate early if the shift is invalid
     if(!shift || shift > 25 || shift < -25 || shift === 0) return false
 
     //mutate alphabet and input into arrays (&input to lowercase)
