@@ -1,22 +1,17 @@
-// Please refrain from tampering with the setup code provided here,
-// as the index.html and test files rely on this setup to work properly.
-// Only add code (helper methods, variables, etc.) within the scope
-// of the anonymous function on line 6
-
 const substitutionModule = (function () {
   const actualAlphabet = "abcdefghijklmnopqrstuvwxyz";
 
   function substitution(input, alphabet, encode = true) {
-    //guard clause: aplhabet is 26 characters & all characters unique
+    //guard clause: alphabet is 26 characters & all characters unique
     if(!alphabet || alphabet.length !== 26 || new Set(alphabet).size !== alphabet.length) return false
 
-    //remap the input and modify based on incoming alphabet compared to actual alphabet
+    //remap the input and modify it based on the incoming alphabet compared to the actual alphabet
     return input
       .toLowerCase()
       .split('')
       //letter->actual index -> same index on new alphabet -> value
       .map((character)=>{
-        if (character.match(" ")) return character; //keeps spaces
+        if (character.match(" ")) return character;           //keeps spaces
         if(encode){
           return alphabet[actualAlphabet.indexOf(character)]
         }else{
