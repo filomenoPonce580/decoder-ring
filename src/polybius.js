@@ -1,10 +1,5 @@
-// Please refrain from tampering with the setup code provided here,
-// as the index.html and test files rely on this setup to work properly.
-// Only add code (helper methods, variables, etc.) within the scope
-// of the anonymous function on line 6
-
 const polybiusModule = (function () {
-  //create data sets to decifer and encode
+  //create data sets to decipher and encode
   const decodeDB = {
     "11": "A",
     "21": "B",
@@ -43,7 +38,7 @@ const polybiusModule = (function () {
     "G": "22",
     "H": "32",
     "I": "42",
-    "J" : "42",
+    "J": "42",
     "K": "52",
     "L": "13",
     "M": "23",
@@ -92,7 +87,7 @@ const polybiusModule = (function () {
           .join('')
           .toLowerCase()
       }else{
-        //multiple words, split into array of encoded words, use process above on each word with correct BD, join words with spaces
+        //multiple words, split into an array of encoded words, use the process above on each word with correct BD, join words with spaces
         return input
           .split(' ')
           .map((encodedWord)=> {
@@ -114,7 +109,7 @@ const polybiusModule = (function () {
   };
 })();
 
-
+// examples
 // console.log(polybius("thinkful")); //> "4432423352125413"
 // console.log(polybius("Hello world")); //> '3251131343 2543241341'
 // console.log('*************************')
